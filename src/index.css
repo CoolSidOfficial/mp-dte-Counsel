@@ -1,0 +1,120 @@
+body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+
+}
+
+.nav, .footer{
+  background-color: rgb(17 24 39);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+    color:white;
+    width:100vw;
+    height:10vh;  
+    font-family: sans-serif; 
+}
+.text{
+  font-size:1.25rem;
+  margin-left:1rem;
+ font-weight: 900;
+ margin-bottom: 1rem ;
+}
+ a{
+  text-decoration:none;
+  color:white;
+  margin-right:2rem;
+  font-size:1rem;
+  padding: 0.5rem;
+
+}
+.center{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background-color:#09090b;
+  
+  height:150vh;
+  width:100vw;
+  padding-top:.3rem;
+}
+.box{
+
+color:white;
+border:1px solid white;
+height:65%;
+width:50%;
+border-radius: 10px;
+padding-bottom: 1%;
+
+
+}
+.top{
+  border-radius: 10px 10px 0px 0px;
+  font-size: 1.5rem;
+  font-weight:bold;
+  color:#9CA3AF;
+  background-color: #1F2937;
+  width:100%; 
+  height:10%;
+  display:flex;
+  
+}
+.text{
+  margin-top:1rem;
+  margin-left:1.5rem;
+  font-size:1.5rem;
+  font-weight: bold;
+   
+}
+.data{
+  margin-top:1rem;
+  margin-left: 5%;
+  
+}
+label{
+  display:block;
+  padding:1.5rem;
+  color:#9CA3AF;
+  font-size:1.5rem;
+  font-weight: bold;
+}
+.data input, .data select{
+  width:80%;
+  margin-left:5%;
+  margin-right:5%;
+  background-color: #1F2937;
+  color:white;
+  font-weight:bold;
+  padding: .8rem 0.75rem;
+}
+.data select{
+  width:85%;
+}
+button{
+  margin-left:5%;
+  margin-right:5%;
+  display: block;
+  width:85%;
+  font-size:1rem;
+  background-color: #1F2937;
+  color:white;
+  font-weight:bold;
+  padding:0.8rem 0.75rem;
+  margin-top:2rem;
+  border:none;
+  cursor:pointer;
+}
+.blank{
+  height:100vh;
+  width:100vw;
+  background-color: #09090b;
+}
+a:hover, button:hover{
+  background-color: black;
+  color: white;
+  font-weight: bolder;
+}
+
