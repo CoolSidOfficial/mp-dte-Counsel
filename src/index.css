@@ -93,7 +93,7 @@ label{
 .data select{
   width:85%;
 }
-button{
+#button{
   margin-left:5%;
   margin-right:5%;
   display: block;
