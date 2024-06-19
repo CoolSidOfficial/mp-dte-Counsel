@@ -1,6 +1,12 @@
 import React from 'react'
+import { useNavigate } from "react-router-dom";
 
 function Middle() {
+  const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate("/checker");
+    }
   return (
    
     <div className="center">
@@ -9,7 +15,7 @@ function Middle() {
              <h2 class="text">Counselling Predictor</h2>
             </div>
             <div className="data">
-            <form action="http://localhost:3000/submit-form " method="POST">
+            <form target="_blank" action="http://localhost:3000/submit-form " method="POST">
                 <label for="rank" > Rank</label>
                 <input type="number" id="rank" name="rank"placeholder="Enter your rank" />
                 <label for="category"> Category</label>
@@ -35,8 +41,10 @@ function Middle() {
                         <option> Mechanical</option>
                         <option> Civil</option>
                         </select>
-                        <input id="button" type="submit" value="Predict"/>
+                        <input id="button"  onClick={handleClick} type="submit" value="Predict"/>
+ 
                         </form>
+                        
             </div>
             
     </div>

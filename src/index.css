@@ -117,4 +117,61 @@ a:hover, button:hover{
   color: white;
   font-weight: bolder;
 }
+.year{
+  width:100vw;
+  display:flex;
+  justify-content:end;
+  align-items:center;
+  height:10vh;
+  background-color:#09090b;
+}
+.year select{
+  margin-right:3rem;
+  margin-top:1rem;
+  width:15%;
+  height:50%;
+  font-size:1.8rem;
+  background-color: #1F2937;
+  color:white;
+}
+.choose{
+  width:100wh;
+  background-color:#09090b;
+  display:block;
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+  height:150vh;
+ padding-top:10%;
+}
+.choose label{
+  font-size:2rem;
+  font-weight:bold;
+  font-weight:bold;
+  color:#9CA3AF;
+  
+}
+.choose select{
+  align-self: center;
+  margin-left:3%;
+  text-align: center;
+  width:50%;
+  padding:1.2rem;
+  font-size:2rem;
+  background-color: #1F2937;
+  color:white;
+}
+.choose input{
+  margin-top:5%;
+  align-self: center;
+  margin-left:3%;
+  text-align: center;
+  width:50%;
+  padding:1.2rem;
+  font-size:2rem;
+  background-color: #1F2937;
+  color:white;
+  margin-bottom: 18%;
+}
 
