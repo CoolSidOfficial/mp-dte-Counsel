@@ -1,3 +1,4 @@
+
 body{
     margin:0;
     padding:0;
@@ -175,3 +176,16 @@ a:hover, button:hover{
   margin-bottom: 18%;
 }
 
+.select_options{
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #09090b;
+  align-items: center;
+  justify-content: space-evenly;
+  
+}
+.each_option{
+  width: 50rem;
+  height: 2rem;
+}
