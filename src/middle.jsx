@@ -1,8 +1,14 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom";
-import {useState} from 'react';
+import {useState,createContext} from 'react';
 import Output from './output';
 import SecondPage from './secondPage';
+import axios from 'axios';    
+
+export const Form_Context=createContext()
+
+
+
 function Middle() {
   
   const [b_data,u_b_data]=useState({
@@ -14,9 +20,13 @@ function Middle() {
 
   })
   const [index,setIndex]=useState(false)
+  const [recv_data,u_recv_data]=useState([])
   const after_submit=(event)=>{
     event.preventDefault();
     setIndex(!index)
+    send_data()
+
+
 
 
   }
@@ -29,20 +39,37 @@ function Middle() {
       }
   
     })
+
    
   
   }
-  
+
+const send_data=async ()=>{
+  try{
+    let requested= await axios.get("http://localhost:3000/submit-form",{
+      params:b_data,
+    })
+    u_recv_data( await requested.data)
+    console.log(recv_data)
+
+  }catch(error){
+    alert("Some error occurred while connecting to backend::",error)
+   console.log(error)
+  }
+    
+}
   return (
     <>
-      { index ?<SecondPage/>:
+    <Form_Context.Provider value={recv_data}>
+
+    
+      { index ?<SecondPage />:
     <div className="center">
         <div className="box">
             <div className="top">
              <h2 className="text">Counselling Predictor</h2>
             </div>
             <div className="data">
-            {/* <form  target="_self" action="http://localhost:3000/submit-form " method="GET"> */}
                 <form onSubmit={after_submit}>
                 <label htmlFor="rank" > Rank</label>
                 <input type="number" id="rank" name="rank"placeholder="Enter your rank" onChange={inputEvent} />
@@ -77,7 +104,9 @@ function Middle() {
             
     </div>
 </div>
- } </>
+ } 
+  </Form_Context.Provider>
+ </>
     
 )
 

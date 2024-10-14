@@ -10,7 +10,7 @@ function Input_comp() {
     </select>
 
     </div>
-    
+      
     </>
   )
 }

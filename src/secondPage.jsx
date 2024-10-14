@@ -1,5 +1,13 @@
 import React from 'react'
+import { useContext } from 'react'
+import { Form_Context } from './middle'
+
+
+
+
+
 function SecondPage() {
+    const u_data=useContext(Form_Context)
   return (
     <> 
     <div class="year">
@@ -9,47 +17,68 @@ function SecondPage() {
         <option>2023</option>
         <option>2022</option>
         <option>2021</option>
-        <option>2020</option>
+        <option>2020 </option>
         </select>
 </div>
-<div class="choose">
+ <div class="choose">
+     
     <label for="firstPreference"> First Preferance:{true?"✅":"❎"} </label>
     <select id="firstPreference">
-        <option>Choose College</option>
-        <option>Oriental, Bhopal</option>
-        <option>LNCT,Bhopal</option>
-        <option>LNCT-S,Bhopal</option>
+    {
+    u_data.map((option, index) => (
+        <option key={index}>
+            {option['INSTITUTE NAME']}
+        </option>
+    ))
+}
+
         </select>
         <label for="secondPreference"> Second Preferance: {true?"✅":"❎"}</label>
     <select id="secondPreference">
-        <option>Choose College</option>
-        <option>Oriental, Bhopal</option>
-        <option>LNCT,Bhopal</option>
-        <option>LNCT-S,Bhopal</option>
+    {
+    u_data.map((option, index) => (
+        <option key={index}>
+            {option['INSTITUTE NAME']}
+        </option>
+    ))
+}
+
         </select>
         <label for="thirdPreference"> Third Preferance: {true?"✅":"❎"}</label>
     <select id="thirdPreference">
-        <option>Choose College</option>
-        <option>Oriental, Bhopal</option>
-        <option>LNCT,Bhopal</option>
-        <option>LNCT-S,Bhopal</option>
+    {
+    u_data.map((option, index) => (
+        <option key={index}>
+            {option['INSTITUTE NAME']}
+        </option>
+    ))
+}
+
         </select>
         <label for="fourthPreference"> Fourth Preferance: {true?"✅":"❎"}</label>
     <select id="fourthPreference">
-        <option>Choose College</option>
-        <option>Oriental, Bhopal</option>
-        <option>LNCT,Bhopal</option>
-        <option>LNCT-S,Bhopal</option>
+    {
+    u_data.map((option, index) => (
+        <option key={index}>
+            {option['INSTITUTE NAME']}
+        </option>
+    ))
+}
+
         </select>
         <label for="fifthPreference"> Fifth Preferance: {true?"✅":"❎"}</label>
     <select id="fifthPreference">
-        <option>Choose College</option>
-        <option>Oriental, Bhopal</option>
-        <option>LNCT,Bhopal</option>
-        <option>LNCT-S,Bhopal</option>
+    {
+    u_data.map((option, index) => (
+        <option key={index}>
+            {option['INSTITUTE NAME']}
+        </option>
+    ))
+}
+
         </select>
         <input type="button" value="Predict"/>
-</div>
+</div> 
    
     </>
   )

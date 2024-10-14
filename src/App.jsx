@@ -4,7 +4,6 @@ import Navbar from './navbar';
 import Middle from './middle';
 import Output from './output';
 import Footer from './footer';
-// import MultiStep from 'react-multistep';
 import SecondPage from './secondPage';
 function App() {
   return (
