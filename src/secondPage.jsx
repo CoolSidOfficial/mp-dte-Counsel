@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useContext } from 'react'
 import { Form_Context } from './middle'
 
@@ -8,6 +8,7 @@ import { Form_Context } from './middle'
 
 function SecondPage() {
     const u_data=useContext(Form_Context)
+    const [tick,u_tick]=useState(false)
   return (
     <> 
     <div class="year">
@@ -22,7 +23,7 @@ function SecondPage() {
 </div>
  <div class="choose">
      
-    <label for="firstPreference"> First Preferance:{true?"✅":"❎"} </label>
+    <label for="firstPreference"> First Preferance:{tick?"✅":"❎"} </label>
     <select id="firstPreference">
     {
     u_data.map((option, index) => (
@@ -33,7 +34,7 @@ function SecondPage() {
 }
 
         </select>
-        <label for="secondPreference"> Second Preferance: {true?"✅":"❎"}</label>
+        <label for="secondPreference"> Second Preferance: {tick?"✅":"❎"}</label>
     <select id="secondPreference">
     {
     u_data.map((option, index) => (
@@ -44,7 +45,7 @@ function SecondPage() {
 }
 
         </select>
-        <label for="thirdPreference"> Third Preferance: {true?"✅":"❎"}</label>
+        <label for="thirdPreference"> Third Preferance: {tick?"✅":"❎"}</label>
     <select id="thirdPreference">
     {
     u_data.map((option, index) => (
@@ -55,7 +56,7 @@ function SecondPage() {
 }
 
         </select>
-        <label for="fourthPreference"> Fourth Preferance: {true?"✅":"❎"}</label>
+        <label for="fourthPreference"> Fourth Preferance: {tick?"✅":"❎"}</label>
     <select id="fourthPreference">
     {
     u_data.map((option, index) => (
@@ -66,7 +67,7 @@ function SecondPage() {
 }
 
         </select>
-        <label for="fifthPreference"> Fifth Preferance: {true?"✅":"❎"}</label>
+        <label for="fifthPreference"> Fifth Preferance: {tick?"✅":"❎"}</label>
     <select id="fifthPreference">
     {
     u_data.map((option, index) => (
@@ -77,7 +78,7 @@ function SecondPage() {
 }
 
         </select>
-        <input type="button" value="Predict"/>
+        <input type="button" value="Predict" onClick={()=>u_tick(!tick)}/>
 </div> 
    
     </>
