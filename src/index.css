@@ -145,6 +145,7 @@ a:hover, button:hover{
   align-items:center;
   height:150vh;
  padding-top:10%;
+ padding-left: 2px;
 }
 .choose label{
   font-size:2rem;
@@ -154,10 +155,10 @@ a:hover, button:hover{
   
 }
 .choose select{
-  align-self: center;
+  /* align-self: center; */
   margin-left:3%;
   text-align: center;
-  width:50%;
+  width:80%;
   padding:1.2rem;
   font-size:2rem;
   background-color: #1F2937;
@@ -188,4 +189,13 @@ a:hover, button:hover{
 .each_option{
   width: 50rem;
   height: 2rem;
+}
+
+.stepper{
+  color: hsl(from color h s l);
+}
+
+.choose select{
+  
+ text-align: left; 
 }

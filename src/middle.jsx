@@ -39,14 +39,12 @@ function Middle() {
       }
   
     })
-
-   
   
   }
 
 const send_data=async ()=>{
   try{
-    let requested= await axios.get("http://localhost:3000/submit-form",{
+    let requested= await axios.get("http://localhost:7200/submit-form",{
       params:b_data,
     })
     u_recv_data( await requested.data)
@@ -63,10 +61,14 @@ const send_data=async ()=>{
     <Form_Context.Provider value={recv_data}>
 
     
+      <span className='stepper'>1</span>
+      <span className='stepper'>2</span>
       { index ?<SecondPage />:
     <div className="center">
+    
         <div className="box">
             <div className="top">
+              
              <h2 className="text">Counselling Predictor</h2>
             </div>
             <div className="data">
