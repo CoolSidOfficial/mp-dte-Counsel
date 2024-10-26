@@ -33,11 +33,11 @@ body{
 }
 .center{
   display:flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
   background-color:#09090b;
   
-  height:150vh;
+  height:130vh;
   width:100vw;
   padding-top:.3rem;
 }
@@ -71,7 +71,7 @@ padding-bottom: 1%;
    
 }
 .data{
-  margin-top:1rem;
+  /* margin-top:1rem; */
   margin-left: 5%;
   
 }
@@ -191,11 +191,73 @@ a:hover, button:hover{
   height: 2rem;
 }
 
-.stepper{
-  color: hsl(from color h s l);
-}
+/* .stepper{
+   background-color: #09090B;
+   color: white;
+   display: flex;
+   /* align-items: center; */
+   justify-content: center; 
+   
+  }
+  .step-small{
+    background-color: green;
+    padding: 10px;
+    text-align: center;
+    font-size: 90px;
+    margin-top:10px;
+    border-radius: 50%;
+    width: 100px;
+    border: solid white 4px;
+} */
+
+
+
 
 .choose select{
-  
  text-align: left; 
+}
+
+
+
+
+.stepper-container {
+  background-color: #09090B;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+  padding:30px;
+}
+
+.stepper {
+  display: flex;
+  align-items: center;
+}
+.step {
+  width: 90px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: gray;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.step.active {
+  background-color: green;
+}
+
+.line {
+  width: 490px;
+  height: 5px;
+  background-color: gray;
+  margin: 0 10px;
+  transition: background-color 0.3s;
+}
+
+.line.green {
+  background-color: green;
 }
