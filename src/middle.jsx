@@ -5,17 +5,13 @@ import Output from './output';
 import SecondPage from './secondPage';
 import axios from 'axios';    
 import { useContext } from 'react';
-import { stepperContext } from './App';
-
-
-
+import { StepperContext } from './Provider';
 
 export const Form_Context=createContext()
 
-
-
 function Middle() {
-  const step=useContext(stepperContext)
+  const {step,goToNextStep}=useContext(StepperContext)
+
   const [b_data,u_b_data]=useState({
     "rank":"",
     "category":"",
@@ -28,6 +24,7 @@ function Middle() {
     event.preventDefault();
     setIndex(!index)
     send_data()
+    goToNextStep();
 
   }
   const inputEvent=(event)=>{
@@ -44,7 +41,7 @@ function Middle() {
 
 const send_data=async ()=>{
   try{
-    let requested= await axios.get("http://localhost:7200/submit-form",{
+    let requested= await axios.get("https://counsel-backend.onrender.com/submit-form",{
       params:b_data,
     })
     u_recv_data( await requested.data)
