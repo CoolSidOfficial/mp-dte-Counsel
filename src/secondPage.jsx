@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useContext } from 'react'
 import { Form_Context } from './middle'
-import institutes_name from "./clg_list"
+import institutes_name from "./final_list"
 
 
 function SecondPage() {
@@ -16,7 +16,8 @@ function SecondPage() {
       for (let key in u_data){
         let simple_string=u_data[key]['INSTITUTE NAME']
         let cleanedStr = simple_string.replace(/\n/g, '');
-        // console.log(cleanedStr,">>",event.target.value)
+        //  let cleanedStr=simple_string
+        console.log(cleanedStr,">>",event.target.value)
         if (cleanedStr==event.target.value){
 
           matchFound = true;
