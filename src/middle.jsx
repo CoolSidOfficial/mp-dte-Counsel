@@ -104,7 +104,6 @@ const send_data=async ()=>{
                     <option> Select Round </option>  
                     <option> Round 1</option>
                     <option> Round 2</option>
-                    <option> Round 3</option>
                     </select>
                      <label htmlFor="branch"> Branch</label>
                     <select id="branch" name="branch" onChange={inputEvent}>
