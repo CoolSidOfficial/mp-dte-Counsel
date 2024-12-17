@@ -1,4 +1,6 @@
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 body{
     margin:0;
     padding:0;
@@ -196,9 +198,9 @@ a:hover, button:hover{
    color: white;
    display: flex;
    /* align-items: center; */
-   justify-content: center; 
+   /* justify-content: center; 
    
-  }
+  } */
   .step-small{
     background-color: green;
     padding: 10px;
@@ -261,3 +263,6 @@ a:hover, button:hover{
 .line.green {
   background-color: green;
 }
+
+
+

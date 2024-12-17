@@ -7,7 +7,7 @@ function Navbar() {
             CoolCounsel
         </div>
         <div className="items">
-            <a href="#">Home</a>
+            <a href="/">Home</a>
             <a href="#">About</a>
             <a href="#">Predictor</a>
             <a href="#">Contact</a>
