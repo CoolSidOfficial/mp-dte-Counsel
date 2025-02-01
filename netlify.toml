@@ -1,5 +1,4 @@
 [[redirects]]
-  # Redirect all routes to index.html (needed for React Router to work)
   from = "/*"
   to = "/index.html"
   status = 200
