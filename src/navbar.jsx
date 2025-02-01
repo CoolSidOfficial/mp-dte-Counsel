@@ -8,9 +8,9 @@ function Navbar() {
         </div>
         <div className="items">
             <a href="/">Home</a>
-            <a href="#">About</a>
-            <a href="#">Predictor</a>
-            <a href="#">Contact</a>
+            <a href="/about">About</a>
+            <a href="/predictor">Predictor</a>
+            <a href="/contact">Contact</a>
         </div>
 
     </div>
