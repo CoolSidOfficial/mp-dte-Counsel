@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom";
 import {useState,createContext} from 'react';
-import Output from './output';
+// import Output from './output';
 import SecondPage from './secondPage';
 import axios from 'axios';    
 import { useContext } from 'react';
@@ -16,7 +16,7 @@ function Middle() {
     "rank":"",
     "category":"",
     "round":"",
-    "id":"",
+    "branch":"",
   })
   const [index,setIndex]=useState(false)
   const [recv_data,u_recv_data]=useState([])
@@ -40,14 +40,16 @@ function Middle() {
   }
 
 const send_data=async ()=>{
+  // const link="https://counsel-backend.onrender.com/submit-form"
+  const link="http://localhost:7200/submit-form"
   try{
-    let requested= await axios.get("https://counsel-backend.onrender.com/submit-form",{
+    let requested= await axios.get(link,{
       params:b_data,
     })
     u_recv_data( await requested.data)
     console.log(recv_data)
 
-  }catch(error){
+  }catch(error){  
     alert("Some error occurred while connecting to backend::",error)
    console.log(error)
   }
@@ -69,10 +71,13 @@ const send_data=async ()=>{
             <div className="data">
                 <form onSubmit={after_submit}>
                 <label htmlFor="rank" > Rank</label>
-                <input type="number" id="rank" name="rank"placeholder="Enter your rank" onChange={inputEvent} />
+                <input type="number"  id="rank" name="rank" placeholder="Enter your rank" onChange={inputEvent} />
                 <label htmlFor="category"> Category</label>
                 <select name="category"  id="category" onChange={inputEvent}>
-                <option value="EWS">Economically Weaker Sections</option>
+               
+ <option value="UR/X/F">General Female Category </option>
+<option value="UR/X/OP">General Male Category </option>
+<option value="EWS">Economically Weaker Sections</option>
 <option value="FW/OP">Formerly Widowed/Orphaned Persons</option>
 <option value="JKM">Jammu and Kashmir Migrants</option>
 <option value="JKR">Jammu and Kashmir Residents</option>
@@ -92,23 +97,19 @@ const send_data=async ()=>{
 <option value="UR/H/OP">Unreserved - Orthopedically Handicapped - Open</option>
 <option value="UR/NCC/F">Unreserved - National Cadet Corps - Female</option>
 <option value="UR/NCC/OP">Unreserved - National Cadet Corps - Open</option>
-<option value="UR/S/F">Unreserved - Scheduled - Female</option>
-<option value="UR/S/OP">Unreserved - Scheduled - Open</option>
-<option value="UR/X/F">Unreserved Male Category - Female</option>
-<option value="UR/X/OP">Unreserved Male Category - Open</option>
-
-
-                    </select> 
-                    <label htmlFor="round"> Round </label> 
-                    <select name="round" id ="round" onChange={inputEvent}>
-                    <option> Select Round </option>  
-                    <option> Round 1</option>
-                    <option> Round 2</option>
-                    </select>
-                     <label htmlFor="branch"> Branch</label>
-                    <select id="branch" name="branch" onChange={inputEvent}>
-                    <option> Select Branch</option>
-                    <option value="AG">AG</option>
+<option value="UR/S/F">General - Sainik - Female</option>
+<option value="UR/S/OP">General - Sanik - Open</option>
+  </select> 
+ <label htmlFor="round"> Round </label> 
+ <select name="round" id ="round" onChange={inputEvent}>
+ <option> Select Round </option>  
+<option  > Round 1</option>
+<option> Round 2</option>
+</select>
+ <label htmlFor="branch"> Branch</label>
+<select id="branch" name="branch"  onChange={inputEvent}>
+<option> Select Branch</option>
+<option value="AG">AG</option>
 <option value="AGE">AGE</option>
 <option value="AIADS">AIADS</option>
 <option value="AIAIDS">AIAIDS</option>
@@ -124,7 +125,7 @@ const send_data=async ()=>{
 <option value="CHEM">CHEM</option>
 <option value="CSBS">CSBS</option>
 <option value="CSD">CSD</option>
-<option value="CSE">CSE</option>
+<option value="CSE" >CSE</option>
 <option value="CSEAI">CSEAI</option>
 <option value="CSEAIADS">CSEAIADS</option>
 <option value="CSEBC">CSEBC</option>
@@ -161,12 +162,11 @@ const send_data=async ()=>{
 <option value="MTENG">MTENG</option>
 <option value="PCT">PCT</option>
 
-                        </select> 
-                        <input id="button"  type="submit"   value="Next"/>
- 
-                        </form>
+ </select> 
+     <input id="button"  type="submit"   value="Next"/>
+      </form>
                         
-            </div>
+ </div>
             
     </div>
 </div>
