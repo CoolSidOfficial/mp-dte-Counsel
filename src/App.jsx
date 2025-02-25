@@ -9,6 +9,8 @@ import { useState } from 'react';
 import MyProvider from './Provider';
 import { useContext } from 'react';
 import { StepperContext } from './Provider';
+import {Helmet} from "react-helmet";
+
 
 const Stepper = () => {
   const { step } = useContext(StepperContext); // Access context inside this child component
@@ -33,7 +35,16 @@ const Stepper = () => {
 
 function App() {
   return (
+    
       <MyProvider>
+        <Helmet>
+            <title>CoolCounsel-Predictor</title>
+        <meta
+                name="description"
+                content=" free Mp Dte counselling predictor  "
+            />
+            <meta name="keywords " content="mp dte predictor, mp dte college predictor, mp dte counseling, mp dte admission predictor, mp dte cutoff, mp dte seat allotment, mp dte engineering predictor, mp dte polytechnic predictor, mp dte merit list, mp dte rank predictor, mp dte choice filling, mp dte 2025 counseling, mp dte previous year cutoff, mp online dte predictor, madhya pradesh dte predictor, mp dte eligibility checker, mp dte seat matrix,lnct rank"/>
+        </Helmet>
           <Navbar />
           <Stepper />  
           <Middle />

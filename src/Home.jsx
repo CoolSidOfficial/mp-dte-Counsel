@@ -2,10 +2,15 @@ import React from 'react'
 import Navbar from './navbar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUsers,faBuildingColumns,faArrowTrendUp } from '@fortawesome/free-solid-svg-icons';
+import { Helmet } from 'react-helmet';
 
 function Home() {
   return (
     <div className='bg-[#111827]  w-full min-h-screen '>
+      <Helmet>
+      <meta name="keywords " content="mp dte predictor, mp dte college predictor, mp dte counseling, mp dte admission predictor, mp dte cutoff, mp dte seat allotment, mp dte engineering predictor, mp dte polytechnic predictor, mp dte merit list, mp dte rank predictor, mp dte choice filling, mp dte 2025 counseling, mp dte previous year cutoff, mp online dte predictor, madhya pradesh dte predictor, mp dte eligibility checker, mp dte seat matrix,lnct rank"/>
+
+      </Helmet>
     <Navbar/>
     <header className='xl:flex xl:flex-col   justify-center items-center  '>
       <div className='xl:text-6xl xl:font-bold xl:p-6 xl:text-white'>Predict Your Engineering  College</div>
