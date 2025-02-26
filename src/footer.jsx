@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div class="footer">
+    <div className="footer">
       <div className='text'>CoolCounsel. All rights reserved.</div>
       <div className='items'>
       <a href="#"> Privacy Policy </a>
