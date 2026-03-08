@@ -40,7 +40,7 @@ function Middle() {
   }
 
 const send_data=async ()=>{
-  const link="https://counsel-backend.onrender.com/submit-form"
+  const link="https://counselbackend-h8euecftadbxcqen.centralindia-01.azurewebsites.net/submit-form"
   // const link="http://localhost:7200/submit-form"
   try{
     let requested= await axios.get(link,{
