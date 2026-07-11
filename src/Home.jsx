@@ -70,7 +70,7 @@ function Home() {
      </div>
     <footer className='bg-[#1a2335] w-screen h-20 justify-center  items-center flex text-white ' >
      <div> &#169;
-     2024 CoolCounsel. All rights reserved.</div>
+     2026 CoolCounsel. All rights reserved.</div>
     </footer>
     </div>
 
