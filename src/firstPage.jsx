@@ -40,7 +40,7 @@ function Middle() {
   }
 
 const send_data=async ()=>{
-  const link="https://coolguide.168-144-22-229.nip.io/submit-form"
+  const link="https://counsel.20.219.12.237.nip.io/submit-form"
   // const link="http://localhost:7200/submit-form"
   try{
     let requested= await axios.get(link,{
